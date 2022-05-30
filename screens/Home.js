@@ -10,6 +10,10 @@ const Home = () => {
    const goToScan = () => {
       Actions.scan()
    }
+
+   const goToCafe = () => {
+      Actions.cafe()
+   }
    return (
       <View style={{height: '100%'}}>
          <Image source={require('../assets/top.png')} style={styles.topImg}></Image>
@@ -32,27 +36,29 @@ const Home = () => {
                autoCapitalize = "none"/>
             <Image source={require('../assets/home/search-icon.png')} style={styles.searchIcon}></Image>
          </View>
-         <View style={styles.restaurant}>
-            <View style={styles.restaurantHead}>
-               <Text style={styles.restaurantHeadTitle}>Popular Restuarants</Text>
-               <Text style={styles.restaurantAll}>See All</Text>
-            </View>
-            <ScrollView>
-               <View style={styles.restaurantBody}>
-                  <View style={styles.restaurantBodyTxt}>
-                     <Image source={require('../assets/home/pizza.png')}></Image>
-                     <View style={{paddingLeft: 10}}>
-                        <Text style={{color: '#000', fontSize: 20}}>Anna's Cafe</Text>
-                        <Text style={{color: '#000', paddingTop:10}}>Bakery</Text>
+         <TouchableOpacity onPress = {goToCafe}>
+            <View style={styles.restaurant}>
+               <View style={styles.restaurantHead}>
+                  <Text style={styles.restaurantHeadTitle}>Popular Restuarants</Text>
+                  <Text style={styles.restaurantAll}>See All</Text>
+               </View>
+               <ScrollView>
+                  <View style={styles.restaurantBody}>
+                     <View style={styles.restaurantBodyTxt}>
+                        <Image source={require('../assets/home/pizza.png')}></Image>
+                        <View style={{paddingLeft: 10}}>
+                           <Text style={{color: '#000', fontSize: 20}}>Anna's Cafe</Text>
+                           <Text style={{color: '#000', paddingTop:10}}>Bakery</Text>
+                        </View>
+                     </View>
+                     <View style={styles.mark}>
+                        <Image source={require('../assets/home/star.png')}></Image>
+                        <Text>4.5</Text>
                      </View>
                   </View>
-                  <View style={styles.mark}>
-                     <Image source={require('../assets/home/star.png')}></Image>
-                     <Text>4.5</Text>
-                  </View>
-               </View>
-            </ScrollView>
-         </View>
+               </ScrollView>
+            </View>
+         </TouchableOpacity>
          <View style={styles.footer}>
             <Image source={require('../assets/home/footer.png')} style={styles.footerImg}></Image>
             <View style={styles.btnGroup}>
