@@ -10,6 +10,13 @@ class Rate extends React.Component {
     Actions.complete()
   }
 
+  componentDidMount = () => {
+    setTimeout(() => {
+      Actions.chat();
+    }, 3000);
+  }
+
+
   render() {
     return (
       <View style={{backgroundColor: '#F8F8F8', height: '100%'}}>
