@@ -14,6 +14,10 @@ const Home = () => {
    const goToCafe = () => {
       Actions.cafe()
    }
+   
+   const goToSetting = () => {
+      Actions.setting()
+   }
    return (
       <View style={{height: '100%'}}>
          <Image source={require('../assets/top.png')} style={styles.topImg}></Image>
@@ -23,10 +27,12 @@ const Home = () => {
                <Text style={styles.subTitle}>Where are you going next?</Text>
             </View>
             <View>
-               <View style={styles.line1}></View>
-               <View style={styles.line2}></View>
-               <View style={styles.line3}></View>
-               <Image source={require('../assets/icons/plus.png')} style={{marginTop: 50}}></Image>
+               <TouchableOpacity onPress={goToSetting}>
+                  <View style={styles.line1}></View>
+                  <View style={styles.line2}></View>
+                  <View style={styles.line3}></View>
+               </TouchableOpacity>
+               <Image source={require('../assets/home/plus.png')} style={{marginTop: 50}}></Image>
             </View>
          </View>
          <View style={styles.searchBox}>

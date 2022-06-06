@@ -21,6 +21,9 @@ import Chat from './screens/Chat'
 import History from './screens/History'
 import OrderDetail from './screens/OrderDetail'
 import Login from './screens/Auth/Login'
+import Register from './screens/Auth/Register'
+import Setting from './screens/Setting'
+import ForgotPassword from './screens/Auth/ForgotPassword'
 import { Router, Scene } from 'react-native-router-flux'
 import { StatusBar } from 'react-native'
 
@@ -44,6 +47,9 @@ class App extends React.Component {
           <Scene key = "history" component = {History} title = "History" hideNavBar={true} />
           <Scene key = "order_detail" component = {OrderDetail} title = "OrderDetail" hideNavBar={true} />
           <Scene key = "login" component = {Login} title = "Login" hideNavBar={true} />
+          <Scene key = "register" component = {Register} title = "Register" hideNavBar={true} />
+          <Scene key = "forgot_password" component = {ForgotPassword} title = "ForgotPassword" hideNavBar={true} />
+          <Scene key = "setting" component = {Setting} title = "Setting" hideNavBar={true} />
         </Scene>
       </Router>
     );

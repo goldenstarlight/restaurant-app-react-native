@@ -9,13 +9,25 @@ const Login = () => {
   const goToWelcome = () => {
     Actions.welcome()
   }
+
+  const goToRegister = () => {
+    Actions.register()
+  }
+  
+  const goToHome = () => {
+    Actions.home()
+  }
+
+  const goToForgotPassword = () => {
+    Actions.forgot_password()
+  }
   return (
   <View style={{backgroundColor: '#f8f8f8', height: '100%'}}>
     <Image source={require('../../assets/top.png')} style={styles.topImg}></Image>
     <View style = {styles.container}>
       <View>
         <TouchableOpacity onPress = {goToWelcome}>
-            <Image source={require('../../assets/scanning/back.png')} style={{marginTop: 50}}></Image>
+            <Image source={require('../../assets/home/back.png')} style={{marginTop: 50}}></Image>
         </TouchableOpacity>
       </View>
       <View>
@@ -46,11 +58,13 @@ const Login = () => {
           />
           <Text style={{color: '#000'}}>Remember me</Text>
         </View>
-        <Text style={{color: '#000'}}>Forgot password?</Text>
+        <TouchableOpacity onPress={goToForgotPassword}>
+          <Text style={{color: '#000'}}>Forgot password?</Text>
+        </TouchableOpacity>
       </View>
-      <View style={styles.loginBtn}>
+      <TouchableOpacity style={styles.loginBtn} onPress={goToHome}>
         <Image source={require('../../assets/home/login.png')}></Image>
-      </View>
+      </TouchableOpacity>
       <View style={styles.loginWith}></View>
       <View style={{flexDirection: 'row', justifyContent: 'center'}}>
         <Text style={styles.loginWithTxt}>or log in with</Text>
@@ -67,7 +81,7 @@ const Login = () => {
         <Text>
           Don't have an account?
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={goToRegister}>
           <Text style={styles.signUpLink}>Sign Up</Text>
         </TouchableOpacity>
       </View>
@@ -77,77 +91,77 @@ const Login = () => {
 }
 
 const styles = StyleSheet.create({
-   container: {
-      position: 'absolute',
-      width: '100%',
-      paddingLeft: 20,
-      paddingRight: 20
-   },
-   topImg: {
-      width: '100%'
-   },
-   title: {
-      fontSize: 30,
-      color: '#fff',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      marginTop: 30
-   },
-   subTitle: {
-      color: '#fff',
-      paddingTop: 20,
-      fontSize: 14,
-      textAlign: 'center'
-   },
+  container: {
+    position: 'absolute',
+    width: '100%',
+    paddingLeft: 20,
+    paddingRight: 20
+  },
+  topImg: {
+    width: '100%'
+  },
+  title: {
+    fontSize: 30,
+    color: '#fff',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 30
+  },
+  subTitle: {
+    color: '#fff',
+    paddingTop: 20,
+    fontSize: 14,
+    textAlign: 'center'
+  },
 
-   loginForm: {
-      padding: 20
-   }, 
-   input: {
-      backgroundColor: '#fff',
-      paddingLeft: 30,
-      height: 60,
-      borderRadius: 10,
-      marginTop: 20
-   },
+  loginForm: {
+    padding: 20
+  }, 
+  input: {
+    backgroundColor: '#fff',
+    paddingLeft: 30,
+    height: 60,
+    borderRadius: 10,
+    marginTop: 20
+  },
 
-   eyeIcon: {
+  eyeIcon: {
     position: 'absolute',
     top: 45,
     right: 48
- },
- loginBtn: {
-   marginTop: 20,
-   flexDirection: 'row',
-   justifyContent: 'center'
- },
+  },
+  loginBtn: {
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
 
- loginWith: {
-   marginTop: 40,
-   borderColor: 'gray',
-   borderWidth: 1
- },
- loginWithTxt: {
-   padding: 10,
-   backgroundColor: '#f8f8f8',
-   fontSize: 20,
-   textAlign: 'center',
-   marginTop: -30,
-   width: 180
- },
- loginSocialBtn: {
-   flexDirection: 'row',
-   justifyContent: 'space-between'
- },
- signUp: {
-   marginTop: 20,
-   flexDirection: 'row',
-   justifyContent: 'center'
- },
- signUpLink: {
-   paddingLeft: 10,
-   color: 'blue'
- }
+  loginWith: {
+    marginTop: 40,
+    borderColor: 'gray',
+    borderWidth: 1
+  },
+  loginWithTxt: {
+    padding: 10,
+    backgroundColor: '#f8f8f8',
+    fontSize: 20,
+    textAlign: 'center',
+    marginTop: -30,
+    width: 180
+  },
+  loginSocialBtn: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  signUp: {
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  signUpLink: {
+    paddingLeft: 10,
+    color: 'blue'
+  }
    
 });
 export default Login

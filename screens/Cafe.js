@@ -3,7 +3,7 @@ import { StyleSheet, Text, Image, View, TouchableOpacity, ImageBackground, Scrol
 import SelectDropdown from 'react-native-select-dropdown'
 import { Actions } from 'react-native-router-flux'
 
-const countries = ["Dessert", "Food", "Soup"]
+const typeFoods = ["Dessert", "Food", "Soup"]
 const foods = [
   {
     id: 1,
@@ -85,7 +85,7 @@ const Cafe = () => {
         </ImageBackground>
         <View style={{marginLeft:20, marginTop: 20}}>
           <SelectDropdown
-            data={countries}
+            data={typeFoods}
             onSelect={(selectedItem, index) => {
               console.log(selectedItem, index)
             }}

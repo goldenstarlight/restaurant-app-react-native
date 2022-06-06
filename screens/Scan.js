@@ -12,7 +12,7 @@ const Scan = () => {
          <View style = {styles.container}>
             <View>
             <TouchableOpacity onPress = {goToHome}>
-                <Image source={require('../assets/scanning/back.png')} style={{marginTop: 50}}></Image>
+                <Image source={require('../assets/home/back.png')} style={{marginTop: 50}}></Image>
             </TouchableOpacity>
             </View>
             <View>
@@ -21,7 +21,7 @@ const Scan = () => {
             </View>
          </View>
          <View style={styles.qrCodeBody}>
-          <Image source={require('../assets/scanning/qrcode.png')}></Image>
+          <Image source={require('../assets/home/qrcode.png')}></Image>
          </View>
          <View style={styles.scanBtn}>
           <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>Scanning...</Text>
