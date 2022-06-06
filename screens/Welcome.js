@@ -7,15 +7,15 @@ export default function Welcome() {
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 5000,
+      duration: 3000,
       useNativeDriver: true
     }).start();
   }, []);
 
-  const goToHome = () => {
-    Actions.home()
- }
-  
+  const goToLogin = () => {
+    Actions.login()
+  }
+
   return (
     <View style={styles.container}>
       <ImageBackground source={require('../assets/welcome.png')} resizeMode="cover" style={styles.image}>
@@ -26,7 +26,7 @@ export default function Welcome() {
             }
           }
         >
-          <TouchableOpacity onPress = {goToHome}>
+          <TouchableOpacity onPress = {goToLogin}>
             <Text style={styles.text}>Welcome...</Text>
           </TouchableOpacity>
         </Animated.View>

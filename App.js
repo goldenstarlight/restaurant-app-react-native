@@ -20,6 +20,7 @@ import Rate from './screens/Rate'
 import Chat from './screens/Chat'
 import History from './screens/History'
 import OrderDetail from './screens/OrderDetail'
+import Login from './screens/Auth/Login'
 import { Router, Scene } from 'react-native-router-flux'
 import { StatusBar } from 'react-native'
 
@@ -42,6 +43,7 @@ class App extends React.Component {
           <Scene key = "chat" component = {Chat} title = "Chat" hideNavBar={true} />
           <Scene key = "history" component = {History} title = "History" hideNavBar={true} />
           <Scene key = "order_detail" component = {OrderDetail} title = "OrderDetail" hideNavBar={true} />
+          <Scene key = "login" component = {Login} title = "Login" hideNavBar={true} />
         </Scene>
       </Router>
     );
